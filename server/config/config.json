@@ -1,0 +1,13 @@
+{
+  "DATABASE": {
+    "URI": "127.0.0.0:27017/testDB",
+    "OPTION": {
+      "server": {
+        "poolSize": "88",
+        "reconnectTries": 500
+      },
+      "user": "",
+      "pass": ""
+    }
+  }
+}
