@@ -1,0 +1,35 @@
+{
+  "name": "client_1",
+  "version": "0.0.1-beta-1",
+  "description": "client_1",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "npm run build --dev",
+    "build-prod": "npm run build --prod",
+    "build": "rm -rf ./build && ./node_modules/.bin/webpack --config webpack.config.js -w",
+    "build2": "./node_modules/.bin/webpack --config webpack-config/index.js -w",
+    "start": "./node_modules/.bin/webpack-dev-server --port 3001 --progress --color --config webpack.config.js"
+  },
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-syntax-async-functions": "^6.8.0",
+    "babel-plugin-transform-class-properties": "^6.10.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-3": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
+  }
+}

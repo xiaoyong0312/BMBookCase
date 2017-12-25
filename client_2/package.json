@@ -1,0 +1,12 @@
+{
+  "name": "client_2",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  },
+  "devDependencies": {
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.9.7"
+  }
+}

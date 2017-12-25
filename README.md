@@ -19,3 +19,9 @@ http://localhost:3000/api/book/getBookInfoList
 3、 arena android|ios
 
 
+三、 db
+1、 本地 "URI": "127.0.0.0:27017/testDB",
+
+2、 测试环境 "URI": "172.19.65.30:27017/testDB",
+
+

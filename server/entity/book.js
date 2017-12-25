@@ -14,4 +14,4 @@ const BookSchema = new mongoose.Schema({
 }, {timestamps: true});
 
 BookSchema.index({bookId: 1}, {unique: true});
-exports.default = mongoose.model('book', BookSchema);
+exports.default = mongoose.model('books', BookSchema, 'book');

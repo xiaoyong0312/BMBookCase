@@ -6,7 +6,6 @@
 
 const Book = require('../entity/book');
 
-// export default class BookService {
 class BookService {
 
     static async getInfoList() {
@@ -14,6 +13,8 @@ class BookService {
     }
 
     static async getInfo(type, paramter) {
+        console.log(`type: ${type}, paramter: ${paramter}-->>`);
+        paramter = `${paramter}`;
         if ('bookId' == type) {
             return await Book.default.findOne({bookId: paramter}, {'_id': 0, '__v': 0}) || {};
         } else if ('bookName' == type) {
@@ -22,13 +23,13 @@ class BookService {
     }
 
     static async create(bookId, bookName, bookFrontImage, bookBackImage) {
-        return await Book.default.findOneAndUpdate({bookId},
+        return await Book.default.findOneAndUpdate({bookId: `${bookId}`},
             {bookId, bookName, bookFrontImage, bookBackImage},
             {upsert: true, "new": true});
     }
 
     static async updateInfo(bookId, data) {
-        return await Book.default.findOneAndUpdate({bookId}, data, {upsert: true});
+        return await Book.default.findOneAndUpdate({bookId: `${bookId}`}, data, {upsert: true});
     }
 
 
