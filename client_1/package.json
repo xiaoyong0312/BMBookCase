@@ -7,7 +7,6 @@
     "build-dev": "npm run build --dev",
     "build-prod": "npm run build --prod",
     "build": "rm -rf ./build && ./node_modules/.bin/webpack --config webpack.config.js -w",
-    "build2": "./node_modules/.bin/webpack --config webpack-config/index.js -w",
     "start": "./node_modules/.bin/webpack-dev-server --port 3001 --progress --color --config webpack.config.js"
   },
   "dependencies": {
